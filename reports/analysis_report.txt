@@ -1,0 +1,10 @@
+===================================
+Log Type: Heart Rate
+Analysis Date: Thu 29 Jan 2026 02:34:02 PM PST
+
+Device counts:
+
+First entry:
+
+Last entry:
+
