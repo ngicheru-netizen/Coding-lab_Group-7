@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Directory and file configuration
 LOG_DIR = "active_logs"
-LOG_FILE = os.path.join(LOG_DIR, "temperature_log.log")
+LOG_FILE = os.path.join(LOG_DIR, "temperature.log")
 PID_FILE = "/tmp/temperature_recorder.pid"
 DEVICES = ["Temp_Recorder_A", "Temp_Recorder_B"]
 
