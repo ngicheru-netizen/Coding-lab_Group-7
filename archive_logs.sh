@@ -13,17 +13,17 @@ TIME=$(date +"%Y-%m-%d_%H:%M:%S")
 
 case $choice in
   1)
-    LOG="heart_rate_log.log"
+    LOG="heart_rate.log"
     DEST="$ARCHIVE/heart_data_archive"
     NAME="heart_rate"
     ;;
   2)
-    LOG="temperature_log.log"
+    LOG="temperature.log"
     DEST="$ARCHIVE/temperature_data_archive"
     NAME="temperature"
     ;;
   3)
-    LOG="water_usage_log.log"
+    LOG="water_usage.log"
     DEST="$ARCHIVE/water_usage_data_archive"
     NAME="water_usage"
     ;;
