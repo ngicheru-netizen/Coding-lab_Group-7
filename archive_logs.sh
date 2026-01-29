@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ACTIVE="hospital_data/active_logs"
-ARCHIVE="hospital_data/archive"
+ARCHIVE="hospital_data/archived_logs"
 
 echo "Select log to archive:"
 echo "1) Heart Rate"
@@ -13,18 +13,18 @@ TIME=$(date +"%Y-%m-%d_%H:%M:%S")
 
 case $choice in
   1)
-    LOG="heart_rate.log"
-    DEST="$ARCHIVE/heart_rate"
+    LOG="heart_rate_log.log"
+    DEST="$ARCHIVE/heart_data_archive"
     NAME="heart_rate"
     ;;
   2)
-    LOG="temperature.log"
-    DEST="$ARCHIVE/temperature"
+    LOG="temperature_log.log"
+    DEST="$ARCHIVE/temperature_data_archive"
     NAME="temperature"
     ;;
   3)
-    LOG="water_usage.log"
-    DEST="$ARCHIVE/water_usage"
+    LOG="water_usage_log.log"
+    DEST="$ARCHIVE/water_usage_data_archive"
     NAME="water_usage"
     ;;
   *)
@@ -43,4 +43,7 @@ mkdir -p "$DEST"
 mv "$ACTIVE/$LOG" "$DEST/${NAME}_${TIME}.log"
 touch "$ACTIVE/$LOG"
 
-echo "Archive completed"
+
+echo "Archiving $LOG . . ."
+echo "Successfully archived to $DEST/${NAME}_${TIME}.log"
+
